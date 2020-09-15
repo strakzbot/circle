@@ -10,4 +10,8 @@ workflows:
   welcome:
     # Run the welcome/run job in its own container
     jobs:
-      - welcome/run
+      - run: echo "this is the test job"
+      - run: ls
+      - run: df -h
+      - run: nproc
+      
