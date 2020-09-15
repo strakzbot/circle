@@ -28,7 +28,10 @@ jobs:
           command: mkdir -p ~/android/lineage
       - run:
           name: unzip platform tools
-          command: curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo chmod a+x ~/bin/repo
+          command: curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
+      - run:
+          name: unzip platform tools
+          command: chmod a+x ~/bin/repo
       - run:
           name: mkdir
           command: git config --global user.email "you@example.com"
