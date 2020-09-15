@@ -8,20 +8,12 @@ jobs:
       - run: ls
       - run: df -h
       - run: nproc
-      
-  test:
-    docker:
-      - image: circleci/<language>:<version TAG>
-    steps:
-      - checkout
-      - run: echo "this is the test job"
 
 # Orchestrate our job run sequence
 workflows:
   build_and_test:
     jobs:
       - build
-      - test
-    # Run the welcome/run job in its own container
+      un job in its own container
 
       
