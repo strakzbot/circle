@@ -5,7 +5,6 @@ jobs:
     docker:
       - image: circleci/buildpack-deps:focal-curl
     steps:
-      - checkout
       - run:
           name: list
           command: ls
@@ -33,40 +32,40 @@ jobs:
       - run:
           name: unzip platform tools
           command: curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo chmod a+x ~/bin/repo
-       - run:
+      - run:
           name: mkdir
           command: git config --global user.email "you@example.com"
-       - run:
+      - run:
           name: mkdir
           command: git config --global user.name "Your Name"
-       - run:
+      - run:
           name: mkdir
           command: PATH=~/platform-tools:$PATH
-       - run:
+      - run:
           name: mkdir
           command: PATH=~/bin:$PATH
-       - run:
+      - run:
           name: mkdir
           command: repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
-       - run:
+      - run:
           name: mkdir
           command: repo sync
-       - run:
+      - run:
           name: mkdir
           command: source build/envsetup.sh
-       - run:
+      - run:
           name: mkdir
           command: breakfast jasmine_sprout
-       - run:
+      - run:
           name: mkdir
           command: croot
-       - run:
+      - run:
           name: mkdir
           command: brunch jasmine_sprout
-       - run:
+      - run:
           name: mkdir
           command: cd $OUT
-       - run:
+      - run:
           name: mkdir
           command: ls
         
