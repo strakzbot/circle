@@ -46,6 +46,9 @@ jobs:
           command: PATH=~/bin:$PATH
       - run:
           name: mkdir
+          command: cd ~/android/lineage
+      - run:
+          name: mkdir
           command: repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
       - run:
           name: mkdir
