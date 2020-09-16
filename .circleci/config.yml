@@ -58,9 +58,6 @@ jobs:
           command: chmod a+x build/envsetup.sh
       - run:
           name: mkdir
-          command: . /build/envsetup.sh
-      - run:
-          name: mkdir
           command: source build/envsetup.sh
       - run:
           name: mkdir
