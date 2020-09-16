@@ -52,7 +52,7 @@ jobs:
           command: repo sync
       - run:
           name: mkdir
-          command: source build/envsetup.sh
+          command: . build/envsetup.sh
       - run:
           name: mkdir
           command: breakfast jasmine_sprout
