@@ -67,6 +67,15 @@ jobs:
           command: breakfast jasmine_sprout
       - run:
           name: mkdir
+          command: export USE_CCACHE=1
+      - run:
+          name: mkdir
+          command: export CCACHE_EXEC=/usr/bin/ccache
+      - run:
+          name: mkdir
+          command: ccache -M 50G
+      - run:
+          name: mkdir
           command: croot
       - run:
           name: mkdir
