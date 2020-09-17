@@ -46,13 +46,22 @@ jobs:
           command: PATH=~/bin:$PATH
       - run:
           name: mkdir
+          command: cd ~/android/lineage
+      - run:
+          name: mkdir
           command: repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
       - run:
           name: mkdir
           command: repo sync
       - run:
           name: mkdir
-          command: source build/envsetup.sh
+          command: ls
+      - run:
+          name: mkdir
+          command: chmod a+x build/envsetup.sh
+      - run:
+          name: mkdir
+          command: . build/envsetup.sh
       - run:
           name: mkdir
           command: breakfast jasmine_sprout
