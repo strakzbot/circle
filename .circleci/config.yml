@@ -50,7 +50,7 @@ jobs:
           command: cd ~/android/lineage
       - run:
           name: mkdir
-          command: repo init -u https://github.com/LineageOS/android.git -b lineage-17.1
+          command: repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-17.1
       - run:
           name: mkdir
           command: repo sync
