@@ -2,6 +2,7 @@ version: 2
 jobs:
   build:
     machine: true
+    resource_class: xlarge
     steps:
       - run:
           name: update
