@@ -56,7 +56,7 @@ jobs:
           command: repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-17.1
       - run:
           name: mkdir
-          command: repo sync
+          command: repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
       - run:
           name: list
           command: ls
