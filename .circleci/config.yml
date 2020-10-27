@@ -48,4 +48,16 @@ jobs:
       - run:
           name: mkdir
           command: cd ~/android/lineage
+      - run:
+          name: list
+          command: ls
+      - run:
+          name: getting script
+          command: wget https://raw.githubusercontent.com/revanthstrakz/script/master/lineage_m31.bash
+      - run:
+          name: permissions for script
+          command: chmod a+x lineage_m31.bash
+      - run:
+          name: executing sxript
+          command: ./lineage_m31.bash
 
