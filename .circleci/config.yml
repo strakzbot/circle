@@ -1,8 +1,7 @@
 version: 2
 jobs:
   build:
-    docker:
-      - image: circleci/buildpack-deps:focal-curl
+    machine: True
     steps:
       - run:
           name: update
@@ -49,39 +48,4 @@ jobs:
       - run:
           name: mkdir
           command: cd ~/android/lineage
-      - run:
-          name: mkdir
-          command: repo init --depth=1 -u https://github.com/LineageOS/android.git -b lineage-17.1
-      - run:
-          name: mkdir
-          command: repo sync
-      - run:
-          name: list
-          command: ls
-      - run:
-          name: cd home
-          command: cd ~
-      - run:
-          name: list
-          command: ls
-      - run:
-          name: getting script
-          command: wget https://raw.githubusercontent.com/revanthstrakz/script/master/lineage_m31.bash
-      - run:
-          name: permissions for script
-          command: chmod a+x lineage_m31.bash
-      - run:
-          name: executing sxript
-          command: ./lineage_m31.bash
-      - run:
-          name: cd out
-          command: cd $OUT
-      - run:
-          name: list
-          command: ls
-      - run:
-          name: list
-          command: tar -cvzf upload.tar.gz *
-      - run:
-          name: list
-          command: curl https://bashupload.com/upload.tar.gz --data-binary @upload.tar.gz 
+
