@@ -5,11 +5,11 @@ jobs:
     steps:
       - run:
           name: getting script
-          command: wget https://raw.githubusercontent.com/revanthstrakz/script/master/lineage_m31.bash
+          command: wget https://raw.githubusercontent.com/revanthstrakz/script/master/circle_m31.bash
       - run:
           name: permissions for script
-          command: chmod a+x lineage_m31.bash
+          command: chmod a+x circle_m31.bash
       - run:
           name: executing sxript
-          command: ./lineage_m31.bash
+          command: ./circle_m31.bash
 
